@@ -160,9 +160,9 @@ export default function SignIn() {
                                 variant = 'contained'
                                 color = 'primary'
                                 className = {classes.button}   
-                                onClick={mostrarAlerta()}                             
+                                onClick={() => {mostrarAlerta()}}                           
                             >
-                                Creando
+                                Crear
                             </Button>
                     
                             <Link to = '/'>
