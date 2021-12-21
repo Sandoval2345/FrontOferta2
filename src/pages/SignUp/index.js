@@ -5,7 +5,7 @@ import PersonAddAltOutlinedIcon from '@mui/icons-material/PersonAddAltOutlined';
 import { useAuth } from '../../context/AuthContext'
 import { Link, useHistory} from 'react-router-dom'
 import { ListItemText } from '@mui/material'
-
+import swal from 'sweetalert'
 
 
 
@@ -81,6 +81,15 @@ export default function SignIn() {
      * donde se ingresara la info necesaria, en este caso email y password
      * 
      */
+    const mostrarAlerta = () =>{
+        if(!email.includes('@ucn.cl')){
+            swal({
+                title: 'Error',
+                text: 'Solo puede crear una cuenta con su correo institucional UCN (xxxx@ucn.cl)',
+                icon: 'error'
+            })
+        }
+    }
     const handleSubmit = async(event) => {
         event.preventDefault(); //para evitar que se recarge
         if (password !== confpas){
@@ -119,7 +128,7 @@ export default function SignIn() {
                                 autoFocus //enfocado en input de usuario
                                 placeholder = 'Correo Institucional'
                                 type = 'email' 
-                                onChange = {handleEmail}                               
+                                onChange = {handleEmail}                            
                             />
                             <br/>
                             <br/>
@@ -150,7 +159,8 @@ export default function SignIn() {
                                 fullWidth
                                 variant = 'contained'
                                 color = 'primary'
-                                className = {classes.button}                                
+                                className = {classes.button}   
+                                onClick={mostrarAlerta()}                             
                             >
                                 Crear
                             </Button>
