@@ -162,7 +162,7 @@ export default function SignIn() {
                                 className = {classes.button}   
                                 onClick={mostrarAlerta()}                             
                             >
-                                Crear
+                                Creando
                             </Button>
                     
                             <Link to = '/'>
