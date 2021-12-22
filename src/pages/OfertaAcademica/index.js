@@ -84,8 +84,8 @@ export default function OfertaAcademica() {
 
 
     
-    
-    let DataSet = datas.map((oferta)=>(
+    console.log(datas)
+    let DataSet = datas?.map((oferta)=>(
 
         {
             Semestre: oferta.semestre,
