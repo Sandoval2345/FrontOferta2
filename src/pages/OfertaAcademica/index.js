@@ -97,6 +97,8 @@ export default function OfertaAcademica() {
         }
     }, [form]);
     
+
+    
     console.log(datas)
     let DataSet = datas?.map((oferta)=>(
 
