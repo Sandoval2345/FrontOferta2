@@ -151,7 +151,7 @@ export default function OfertaAcademica() {
                                 name = 'semestre'
                                 value = {form.semestre}
                                 onChange = {({target}) => handleFormChange({semestre: target.value},setFecha(target.value))}
-                                onInput={(e)=>{e.target.value = e.target.value.slice(0,7)}}
+                                //onInput={(e)=>{e.target.value = e.target.value.slice(0,7)}}
                                 //placeholder = 'Ingerese año-semestre. Ej:2021-02'
                                 
                             />   
