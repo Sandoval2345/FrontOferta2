@@ -80,7 +80,7 @@ export default function OfertaAcademica() {
             })
         }
         //sweet alert
-    },[form])
+    },[])
 
 
     
@@ -101,10 +101,8 @@ export default function OfertaAcademica() {
         e.preventDefault()
         //setFechaError(true)
         if (e.target.value < 7){
-            console.log('caca')
+            
             setFechaError(true)
-        }else{
-            console.log('cacuca')
         }
     }
     const mostrarAlerta=()=>{
