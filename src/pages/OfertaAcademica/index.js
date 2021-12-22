@@ -84,12 +84,13 @@ export default function OfertaAcademica() {
 
 
     useEffect(() => {
+
         if(form.semestre.length === 7){
             const getData = async () => {
             const data = await axios.get(
                 "/api/oferta/getOfertas/" + form.semestre
             );
-            setDatas(data);
+            setDatas(data.datas);
             };
             getData();
         }
