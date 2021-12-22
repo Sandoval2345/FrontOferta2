@@ -83,7 +83,7 @@ export default function OfertaAcademica() {
     },[form])
 
 
-    
+
     
     let DataSet = datas.map((oferta)=>(
 
