@@ -90,7 +90,7 @@ export default function OfertaAcademica() {
             const data = await axios.get(
                 "/api/oferta/getOfertas/" + form.semestre
             );
-            setDatas(data.datas);
+            setDatas(data.data);
             };
             getData();
         }
