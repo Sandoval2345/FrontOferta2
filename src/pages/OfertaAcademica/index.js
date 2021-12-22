@@ -69,10 +69,10 @@ export default function OfertaAcademica() {
 
   
     
-    useEffect (async()=>{
+   /* useEffect (()=>{
         
         if(form.semestre.length === 7){
-            await axios.get('/api/oferta/getOfertas/' + form.semestre)
+            axios.get('/api/oferta/getOfertas/' + form.semestre)
             .then(response => {
                 
                 setDatas(response.data)
@@ -80,9 +80,17 @@ export default function OfertaAcademica() {
             })
         }
         //sweet alert
-    },[form])
+    },[form])*/
 
-
+    useEffect(() => {
+        const getData = async () => {
+          const data = await axios.get(
+            "/api/oferta/getOfertas/" + form.semestre
+          );
+          setDatas(data);
+        };
+        getData();
+      }, [form]);
     
     console.log(datas)
     let DataSet = datas?.map((oferta)=>(
