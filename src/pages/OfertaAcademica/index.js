@@ -87,7 +87,7 @@ export default function OfertaAcademica() {
 
         if(form.semestre.length === 7){
             const getData = async () => {
-            const data = await axios.get(
+            let data = await axios.get(
                 "/api/oferta/getOfertas/" + form.semestre
             );
             console.log(data)
