@@ -83,7 +83,7 @@ export default function Login() {
             swal({
                 title: "Error",
                 text: "Usuario o Contraseña incorrectos, intente nuevamente ",
-                icon: "Error"
+                icon: "error"
             })
             setTimeout (()=> setError(''), 2500) //se setea el error a un string vacio dps de 1500ms
         }
